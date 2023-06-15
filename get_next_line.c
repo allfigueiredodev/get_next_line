@@ -102,7 +102,7 @@ char	*ft_next_chars(char *checkpoint)
 		return (NULL);
 	while (checkpoint[i] != '\0' && checkpoint[i] != '\n')
 		i++;
-	if (!checkpoint[i])
+	if (!checkpoint[i] || !checkpoint[i + 1])
 	{
 		free(checkpoint);
 		return (NULL);
