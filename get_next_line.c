@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:38:14 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/06/14 15:06:19 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/06/14 22:41:56 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,10 +107,10 @@ char	*ft_next_chars(char *checkpoint)
 		free(checkpoint);
 		return (NULL);
 	}
+	i++;
 	first_chars = malloc((ft_strlen(checkpoint) - i + 1) * sizeof(char));
 	if (!first_chars)
 		return (NULL);
-	i++;
 	while (checkpoint[i] != '\0')
 		first_chars[j++] = checkpoint[i++];
 	first_chars[j] = '\0';
